@@ -1,4 +1,4 @@
-Main Container
+/* Main Container */
 .taxes {
   min-height: calc(100vh - 70px);
   padding: 24px;
@@ -116,32 +116,45 @@ Main Container
 
 .taxes__action-btn {
   width: 32px;
-  height: 24px;
+  height: 32px;
   border: none;
-  border-radius: 6px;
+  border-radius: 50%; /* Circular shape */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  opacity: 0.9;
+}
+
+.taxes__action-btn--view {
+  background: #f8d7da; /* Light red background */
+  color: #dc3545; /* Red icon */
+}
+
+.taxes__action-btn--view:hover {
+  background: #f1aeb5;
+  transform: scale(1.05);
 }
 
 .taxes__action-btn--edit {
-  background: #dbeafe;
-  color: #4752c4;
+  background: #d1e7dd; /* Light green background */
+  color: #28a745; /* Green icon */
 }
 
 .taxes__action-btn--edit:hover {
-  background: #bfdbfe;
+  background: #a3cfbb;
+  transform: scale(1.05);
 }
 
 .taxes__action-btn--delete {
-  background: #fecaca;
-  color: #ef4444;
+  background: #fff3cd; /* Light orange background */
+  color: #f0ad4e; /* Orange icon */
 }
 
 .taxes__action-btn--delete:hover {
-  background: #fca5a5;
+  background: #ffeaa7;
+  transform: scale(1.05);
 }
 
 /* Footer */

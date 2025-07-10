@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+/* 
+  Add this to your public/index.html <head> to import Inter font:
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+*/
 
+import React, { useState } from 'react';
+import { Save } from 'lucide-react';
 const Company = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -34,14 +39,15 @@ const Company = () => {
       padding: '24px',
       backgroundColor: '#ffffff',
       minHeight: '100vh',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     companyTitle: {
       fontSize: '24px',
       fontWeight: '600',
       color: '#1a1a1a',
       marginBottom: '32px',
-      borderBottom: 'none'
+      borderBottom: 'none',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     companyForm: {
       maxWidth: '1200px'
@@ -72,10 +78,12 @@ const Company = () => {
       color: '#666666',
       marginBottom: '8px',
       textTransform: 'uppercase',
-      letterSpacing: '0.5px'
+      letterSpacing: '0.5px',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     required: {
-      color: '#ef4444'
+      color: '#ef4444',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     formInput: {
       padding: '12px 16px',
@@ -86,11 +94,13 @@ const Company = () => {
       backgroundColor: '#ffffff',
       transition: 'border-color 0.2s ease',
       outline: 'none',
-      minHeight: '44px'
+      minHeight: '44px',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     formInputFocus: {
       borderColor: '#6366f1',
-      boxShadow: '0 0 0 3px rgba(99, 102, 241, 0.1)'
+      boxShadow: '0 0 0 3px rgba(99, 102, 241, 0.1)',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     formSelect: {
       padding: '12px 16px',
@@ -102,7 +112,8 @@ const Company = () => {
       transition: 'border-color 0.2s ease',
       outline: 'none',
       minHeight: '44px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     coordinateInputs: {
       display: 'flex',
@@ -117,10 +128,12 @@ const Company = () => {
       color: '#1a1a1a',
       backgroundColor: '#ffffff',
       transition: 'border-color 0.2s ease',
-      outline: 'none'
+      outline: 'none',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     zipInput: {
-      maxWidth: '200px'
+      maxWidth: '200px',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     formTextarea: {
       padding: '12px 16px',
@@ -133,7 +146,7 @@ const Company = () => {
       outline: 'none',
       resize: 'vertical',
       minHeight: '100px',
-      fontFamily: 'inherit'
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     formActions: {
       marginTop: '32px',
@@ -153,15 +166,17 @@ const Company = () => {
       fontWeight: '500',
       cursor: 'pointer',
       transition: 'background-color 0.2s ease',
-      outline: 'none'
+      outline: 'none',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     saveButtonHover: {
-      backgroundColor: '#5348e8'
+      backgroundColor: '#5348e8',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     checkmark: {
-      fontSize: '16px'
+      fontSize: '16px',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
-    // Media queries handled in component
     '@media (max-width: 768px)': {
       companyContainer: {
         padding: '16px'
@@ -309,7 +324,7 @@ const Company = () => {
               value={formData.countryCode}
               onChange={handleInputChange}
               style={styles.formSelect}
-              required
+              দেওয়া
             >
               <option value="">Select Country Code</option>
               <option value="+91">+91 (India)</option>
@@ -357,7 +372,7 @@ const Company = () => {
             onMouseEnter={(e) => e.target.style.backgroundColor = '#5348e8'}
             onMouseLeave={(e) => e.target.style.backgroundColor = '#6366f1'}
           >
-            <span style={styles.checkmark}>✓</span>
+            <Save size={16} />
             Save
           </button>
         </div>

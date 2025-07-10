@@ -122,7 +122,7 @@ const ProductCategoriesComponent = () => {
         <h2 className="product-categories-title">PRODUCT CATEGORIES</h2>
         <div className="product-categories-actions">
           <button className="pc-btn-primary" onClick={handleAdd}>
-            <Plus size={16} />
+            <Plus size={16} />Add
           </button>
           <button className="pc-btn-secondary">
             <Upload size={16} />
@@ -175,19 +175,19 @@ const ProductCategoriesComponent = () => {
                 className="pc-action-btn pc-view-btn" 
                 onClick={() => handleView(category)}
               >
-                <Eye size={16} />
+                <Eye size={16} color="#dc3545" /> {/* Red for view */}
               </button>
               <button 
                 className="pc-action-btn pc-edit-btn" 
                 onClick={() => handleEdit(category)}
               >
-                <Edit size={16} />
+                <Edit size={16} color="#28a745" /> {/* Green for edit */}
               </button>
               <button 
                 className="pc-action-btn pc-delete-btn" 
                 onClick={() => handleDelete(category.id)}
               >
-                <Trash2 size={16} />
+                <Trash2 size={16} color="#f0ad4e" /> {/* Orange for delete */}
               </button>
             </div>
           </div>
@@ -453,7 +453,7 @@ const ProductCategoriesComponent = () => {
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Updated font stack */
           background: #f8fafc;
           min-height: 100vh;
         }
@@ -467,9 +467,10 @@ const ProductCategoriesComponent = () => {
 
         .product-categories-title {
           margin: 0;
-          font-size: 18px;
+          font-size: 20px; /* Increased from 18px */
           font-weight: 600;
           color: #1f2937;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .product-categories-actions {
@@ -488,8 +489,9 @@ const ProductCategoriesComponent = () => {
           display: flex;
           align-items: center;
           gap: 6px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-btn-primary:hover {
@@ -506,7 +508,8 @@ const ProductCategoriesComponent = () => {
           display: flex;
           align-items: center;
           gap: 6px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-btn-secondary:hover {
@@ -536,8 +539,9 @@ const ProductCategoriesComponent = () => {
           align-items: center;
           gap: 8px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           color: #374151;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-dropdown-item:hover {
@@ -559,9 +563,10 @@ const ProductCategoriesComponent = () => {
           background: #f9fafb;
           border-bottom: 1px solid #e5e7eb;
           font-weight: 600;
-          font-size: 12px;
+          font-size: 13px; /* Increased from 12px */
           color: #374151;
           text-transform: uppercase;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-table-row {
@@ -569,7 +574,7 @@ const ProductCategoriesComponent = () => {
           grid-template-columns: 2fr 2fr 1fr 1fr;
           gap: 20px;
           padding: 16px 20px;
-          border-bottom: 1px solid #f3f4f6;
+          border-bottom: 1fr solid #f3f4f6;
           align-items: center;
         }
 
@@ -580,8 +585,9 @@ const ProductCategoriesComponent = () => {
         .pc-status {
           padding: 4px 8px;
           border-radius: 4px;
-          font-size: 12px;
+          font-size: 13px; /* Increased from 12px */
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-status.active {
@@ -600,47 +606,51 @@ const ProductCategoriesComponent = () => {
         }
 
         .pc-action-btn {
-          padding: 6px;
+          width: 32px;
+          height: 32px;
           border: none;
-          border-radius: 4px;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.2s;
+          opacity: 0.9;
         }
 
         .pc-view-btn {
-          background: #fef3c7;
-          color: #d97706;
+          background: #f8d7da; /* Light red background */
         }
 
         .pc-view-btn:hover {
-          background: #fde68a;
+          background: #f1aeb5;
+          transform: scale(1.05);
         }
 
         .pc-edit-btn {
-          background: #dcfce7;
-          color: #16a34a;
+          background: #d1e7dd; /* Light green background */
         }
 
         .pc-edit-btn:hover {
-          background: #bbf7d0;
+          background: #a3cfbb;
+          transform: scale(1.05);
         }
 
         .pc-delete-btn {
-          background: #fef2f2;
-          color: #dc2626;
+          background: #fff3cd; /* Light orange background */
         }
 
         .pc-delete-btn:hover {
-          background: #fee2e2;
+          background: #ffeaa7;
+          transform: scale(1.05);
         }
 
         .pc-table-footer {
           padding: 16px 20px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           color: #6b7280;
           background: #f9fafb;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-modal-overlay {
@@ -682,9 +692,10 @@ const ProductCategoriesComponent = () => {
 
         .pc-modal-title {
           margin: 0;
-          font-size: 18px;
+          font-size: 20px; /* Increased from 18px */
           font-weight: 600;
           color: #1f2937;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-close-btn {
@@ -693,6 +704,7 @@ const ProductCategoriesComponent = () => {
           cursor: pointer;
           padding: 4px;
           color: #6b7280;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-close-btn:hover {
@@ -715,15 +727,17 @@ const ProductCategoriesComponent = () => {
 
         .pc-form-label {
           display: block;
-          font-size: 12px;
+          font-size: 13px; /* Increased from 12px */
           font-weight: 600;
           color: #374151;
           margin-bottom: 8px;
           text-transform: uppercase;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-required {
           color: #ef4444;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-form-input {
@@ -731,8 +745,9 @@ const ProductCategoriesComponent = () => {
           padding: 12px;
           border: 1px solid #d1d5db;
           border-radius: 6px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           box-sizing: border-box;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-form-input:focus {
@@ -746,10 +761,11 @@ const ProductCategoriesComponent = () => {
           padding: 12px;
           border: 1px solid #d1d5db;
           border-radius: 6px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           min-height: 80px;
           resize: vertical;
           box-sizing: border-box;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-form-textarea:focus {
@@ -769,9 +785,10 @@ const ProductCategoriesComponent = () => {
           align-items: center;
           gap: 8px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           text-transform: none;
           font-weight: normal;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-radio-label input[type="radio"] {
@@ -794,8 +811,9 @@ const ProductCategoriesComponent = () => {
           border: 1px solid #d1d5db;
           border-radius: 6px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           color: #374151;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-file-label:hover {
@@ -803,8 +821,9 @@ const ProductCategoriesComponent = () => {
         }
 
         .pc-file-name {
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           color: #6b7280;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-modal-footer {
@@ -832,16 +851,18 @@ const ProductCategoriesComponent = () => {
         }
 
         .pc-view-label {
-          font-size: 12px;
+          font-size: 13px; /* Increased from 12px */
           font-weight: 600;
           color: #6b7280;
           text-transform: uppercase;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-view-value {
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           color: #1f2937;
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-delete-modal {
@@ -859,15 +880,17 @@ const ProductCategoriesComponent = () => {
 
         .pc-delete-title {
           margin: 0 0 10px 0;
-          font-size: 20px;
+          font-size: 20px; /* Increased from 20px */
           color: #1f2937;
           font-weight: 600;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-delete-message {
           margin: 0 0 30px 0;
           color: #6b7280;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-delete-actions {
@@ -883,8 +906,9 @@ const ProductCategoriesComponent = () => {
           padding: 12px 24px;
           border-radius: 6px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-btn-danger:hover {
@@ -898,8 +922,9 @@ const ProductCategoriesComponent = () => {
           padding: 12px 24px;
           border-radius: 6px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .pc-btn-cancel:hover {

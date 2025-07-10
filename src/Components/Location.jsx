@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, X, AlertCircle, Edit, Trash2, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, X, AlertCircle, Edit, Trash2, ChevronDown, ChevronLeft, ChevronRight ,Save} from 'lucide-react';
 import './Location.css';
 
 const Location = () => {
@@ -373,17 +373,19 @@ const Location = () => {
             </div>
             <div className="location-modal-footer">
               <button
+                className="location-btn location-btn-primary"
+                onClick={handleSaveLocation}
+              >
+                
+                Save
+              </button>
+              <button
                 className="location-btn location-btn-secondary"
                 onClick={() => setShowLocationModal(false)}
               >
                 Close
               </button>
-              <button
-                className="location-btn location-btn-primary"
-                onClick={handleSaveLocation}
-              >
-                Save
-              </button>
+              
             </div>
           </div>
         </div>

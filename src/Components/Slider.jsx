@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Eye, Edit, Trash2, X, Upload, AlertTriangle } from 'lucide-react';
+import { Plus, Eye, Edit, Trash2, X, Upload,  AlertCircle } from 'lucide-react';
 import './Slider.css';
 
 const Slider = () => {
@@ -136,7 +136,7 @@ const Slider = () => {
       <div className="slider-management-header">
         <h2 className="slider-management-title">SLIDERS</h2>
         <button className="slider-add-btn" onClick={handleAddNew}>
-          <Plus size={16} />
+          <Plus size={16} />Add
         </button>
       </div>
 
@@ -259,7 +259,7 @@ const Slider = () => {
               </div>
               <div className="slider-form-actions">
                 <button className="slider-save-btn" onClick={handleSave}>
-                  <Upload size={16} />
+                  {/* <Upload size={16} /> */}
                   SAVE
                 </button>
                 <button className="slider-clear-btn" onClick={handleClear}>
@@ -301,7 +301,7 @@ const Slider = () => {
         <div className="slider-modal-overlay">
           <div className="slider-delete-modal">
             <div className="slider-delete-icon">
-              <AlertTriangle size={48} />
+              <AlertCircle size={48} />
             </div>
             <h3 className="slider-delete-title">Are you sure ?</h3>
             <p className="slider-delete-text">You will not be able to recover the deleted record!</p>

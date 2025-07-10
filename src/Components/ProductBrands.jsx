@@ -107,7 +107,7 @@ const ProductBrandsComponent = () => {
       <div className="pb-header">
         <h2 className="pb-title">Product Brands</h2>
         <button className="pb-add-btn" onClick={handleAdd}>
-          <Plus size={16} />
+          <Plus size={16} />Add
         </button>
       </div>
 
@@ -133,19 +133,19 @@ const ProductBrandsComponent = () => {
                 className="pb-action-btn pb-view-btn" 
                 onClick={() => handleView(brand)}
               >
-                <Eye size={16} />
+                <Eye size={16} color="#dc3545" /> {/* Red for view */}
               </button>
               <button 
                 className="pb-action-btn pb-edit-btn" 
                 onClick={() => handleEdit(brand)}
               >
-                <Edit size={16} />
+                <Edit size={16} color="#28a745" /> {/* Green for edit */}
               </button>
               <button 
                 className="pb-action-btn pb-delete-btn" 
                 onClick={() => handleDelete(brand.id)}
               >
-                <Trash2 size={16} />
+                <Trash2 size={16} color="#f0ad4e" /> {/* Orange for delete */}
               </button>
             </div>
           </div>
@@ -470,42 +470,43 @@ const ProductBrandsComponent = () => {
         }
 
         .pb-action-btn {
-          padding: 6px;
+          width: 32px;
+          height: 32px;
           border: none;
-          border-radius: 50%;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 32px;
-          height: 32px;
+          transition: all 0.2s;
+          opacity: 0.9;
         }
 
         .pb-view-btn {
-          background: #fef3c7;
-          color: #d97706;
+          background: #f8d7da; /* Light red background */
         }
 
         .pb-view-btn:hover {
-          background: #fde68a;
+          background: #f1aeb5;
+          transform: scale(1.05);
         }
 
         .pb-edit-btn {
-          background: #dcfce7;
-          color: #16a34a;
+          background: #d1e7dd; /* Light green background */
         }
 
         .pb-edit-btn:hover {
-          background: #bbf7d0;
+          background: #a3cfbb;
+          transform: scale(1.05);
         }
 
         .pb-delete-btn {
-          background: #fef2f2;
-          color: #dc2626;
+          background: #fff3cd; /* Light orange background */
         }
 
         .pb-delete-btn:hover {
-          background: #fee2e2;
+          background: #ffeaa7;
+          transform: scale(1.05);
         }
 
         .pb-table-footer {

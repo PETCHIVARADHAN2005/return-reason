@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Edit2, Trash2, Plus, X, CheckCircle } from 'lucide-react';
+import { Edit, Trash2, Plus, X, CheckCircle } from 'lucide-react';
 
 const Analytics = () => {
   const [entries, setEntries] = useState([
@@ -77,7 +77,8 @@ const Analytics = () => {
     <div style={{
       minHeight: '100vh',
       backgroundColor: '#f8fafc',
-      padding: '24px'
+      padding: '24px',
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -135,7 +136,7 @@ const Analytics = () => {
                   padding: '16px 24px',
                   fontSize: '12px',
                   fontWeight: '600',
-                  color: '#6b7280',
+                  color: '#666666', // Adjusted to match Company label color
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em'
                 }}>NAME</th>
@@ -144,7 +145,7 @@ const Analytics = () => {
                   padding: '16px 24px',
                   fontSize: '12px',
                   fontWeight: '600',
-                  color: '#6b7280',
+                  color: '#666666', // Adjusted to match Company label color
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em'
                 }}>STATUS</th>
@@ -153,7 +154,7 @@ const Analytics = () => {
                   padding: '16px 24px',
                   fontSize: '12px',
                   fontWeight: '600',
-                  color: '#6b7280',
+                  color: '#666666', // Adjusted to match Company label color
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em'
                 }}>ACTION</th>
@@ -188,34 +189,38 @@ const Analytics = () => {
                       <button
                         onClick={() => handleEdit(entry)}
                         style={{
-                          backgroundColor: '#e0e7ff',
-                          border: '1px solid #c7d2fe',
-                          borderRadius: '6px',
-                          padding: '8px',
+                          backgroundColor: '#dcfce7',
+                          border: 'none',
+                          borderRadius: '50%',
+                          width: '32px',
+                          height: '32px',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          transition: 'all 0.2s ease'
+                          transition: 'all 0.2s ease',
+                          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
                         }}
                       >
-                        <Edit2 size={16} color="#6366f1" />
+                        <Edit size={16} color="#10b981" />
                       </button>
                       <button
                         onClick={() => handleDelete(entry)}
                         style={{
-                          backgroundColor: '#fee2e2',
-                          border: '1px solid #fecaca',
-                          borderRadius: '6px',
-                          padding: '8px',
+                          backgroundColor: '#fef3c7',
+                          border: 'none',
+                          borderRadius: '50%',
+                          width: '32px',
+                          height: '32px',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          transition: 'all 0.2s ease'
+                          transition: 'all 0.2s ease',
+                          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
                         }}
                       >
-                        <Trash2 size={16} color="#dc2626" />
+                        <Trash2 size={16} color="#f59e0b" />
                       </button>
                     </div>
                   </td>
@@ -292,9 +297,9 @@ const Analytics = () => {
               <div style={{ marginBottom: '20px' }}>
                 <label style={{
                   display: 'block',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: '#374151',
+                  fontSize: '12px', // Adjusted to match Company labels
+                  fontWeight: '500', // Adjusted to match Company labels
+                  color: '#666666', // Adjusted to match Company labels
                   marginBottom: '8px'
                 }}>
                   NAME <span style={{ color: '#ef4444' }}>*</span>
@@ -321,9 +326,9 @@ const Analytics = () => {
               <div style={{ marginBottom: '20px' }}>
                 <label style={{
                   display: 'block',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: '#374151',
+                  fontSize: '12px', // Adjusted to match Company labels
+                  fontWeight: '500', // Adjusted to match Company labels
+                  color: '#666666', // Adjusted to match Company labels
                   marginBottom: '8px'
                 }}>
                   STATUS <span style={{ color: '#ef4444' }}>*</span>

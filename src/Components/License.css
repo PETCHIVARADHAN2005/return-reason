@@ -20,12 +20,13 @@
 }
 
 .license-title {
-  font-size: 28px; /* Increased title size */
+  font-size: 30px; /* Increased from 28px for better prominence */
   font-weight: 600;
   color: #111827;
   margin: 0 0 40px 0; /* Increased bottom margin */
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 20px; /* Increased padding */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Updated font family */
 }
 
 .license-form {
@@ -34,10 +35,11 @@
 
 .license-label {
   display: block;
-  font-size: 16px;
+  font-size: 16px; /* Kept as is, but applied new font family */
   font-weight: bold; /* Made the label bold */
   color: #374151;
   margin-bottom: 12px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Updated font family */
 }
 
 .license-input {
@@ -47,8 +49,8 @@
   border-radius: 8px;
   background-color: #f9fafb;
   color: #111827;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-size: 16px; /* Increased font size */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Updated from monospace stack */
+  font-size: 16px; /* Kept as is, but with new font family */
   font-weight: normal; /* Removed bold from license key value */
   line-height: 1.6; /* Increased line height */
   box-sizing: border-box;
@@ -65,6 +67,7 @@
 
 .license-input::placeholder {
   color: #9ca3af;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .license-actions {
@@ -79,12 +82,13 @@
   background-color: #4752c4;
   color: white;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 16px; /* Kept as is, but applied new font family */
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Updated font family */
 }
 
 .save-button:hover {
@@ -119,18 +123,18 @@
   }
   
   .license-title {
-    font-size: 20px;
+    font-size: 22px; /* Adjusted from 20px for better scaling */
     margin-bottom: 24px;
   }
   
   .license-input {
     padding: 14px 16px;
-    font-size: 14px;
+    font-size: 14px; /* Adjusted from 14px for consistency */
   }
   
   .save-button {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 14px; /* Adjusted from 14px for consistency */
   }
   
   .save-icon {

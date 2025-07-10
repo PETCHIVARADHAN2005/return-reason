@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Save } from 'lucide-react';
 
 const SocialMedia = () => {
   const [socialLinks, setSocialLinks] = useState({
@@ -32,10 +33,10 @@ const SocialMedia = () => {
       margin: '0 auto',
       padding: '24px',
       backgroundColor: 'white',
-      fontFamily: 'Arial, sans-serif'
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     },
     title: {
-      fontSize: '20px',
+      fontSize: '24px',
       fontWeight: '600',
       marginBottom: '24px',
       color: '#1f2937'
@@ -55,10 +56,11 @@ const SocialMedia = () => {
     },
     label: {
       display: 'block',
-      fontSize: '14px',
+      fontSize: '12px',
       fontWeight: '500',
-      color: '#374151',
-      marginBottom: '8px'
+      color: '#666666',
+      marginBottom: '8px',
+      textTransform: 'uppercase'
     },
     input: {
       width: '100%',
@@ -83,6 +85,7 @@ const SocialMedia = () => {
       border: 'none',
       borderRadius: '6px',
       fontSize: '14px',
+      fontWeight: '500',
       cursor: 'pointer',
       transition: 'background-color 0.2s'
     },
@@ -96,6 +99,7 @@ const SocialMedia = () => {
       border: 'none',
       borderRadius: '6px',
       fontSize: '14px',
+      fontWeight: '500',
       cursor: 'pointer',
       transition: 'background-color 0.2s',
       marginTop: '32px'
@@ -238,11 +242,9 @@ const SocialMedia = () => {
           onClick={handleSave}
           style={styles.saveButton}
           onMouseOver={(e) => e.target.style.backgroundColor = '#2563eb'}
-          onMouseOut={(e) => e.target.style.backgroundColor = '#3b82f6'}
+          onMouseOut={(e) => e.target.style.backgroundColor = '#3b82f2'}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <polyline points="20,6 9,17 4,12"></polyline>
-          </svg>
+          <Save size={16} />
           Save
         </button>
       </div>

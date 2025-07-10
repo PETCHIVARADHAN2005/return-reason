@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
+import {Save} from 'lucide-react';
 const Notification = () => {
   const [formData, setFormData] = useState({
     file: null,
@@ -26,7 +27,7 @@ const Notification = () => {
     console.log('Saving notification settings:', formData);
   };
 
-      return (
+  return (
     <div className="notification-container">
       {/* Notification Section */}
       <div className="notification-section">
@@ -155,41 +156,44 @@ const Notification = () => {
         </div>
         
         <button className="save-button" onClick={handleSave}>
-          <span className="save-icon">✓</span>
+          <Save size={16} />
           Save
         </button>
       </div>
 
       <style jsx>{`
         .notification-container {
-          padding: 20px;
-          background-color: #f8f9fa;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 24px;
+          background-color: #ffffff;
           min-height: 100vh;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
         .file-section {
           background: white;
           border-radius: 8px;
-          padding: 24px;
+          padding: 0; /* Removed padding to match Company, handled by main container */
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-          margin-bottom: 20px;
-          max-width: 800px;
+          margin-bottom: 24px; /* Updated to match formRow margin */
+          max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
         }
 
         .notification-section {
-          background: white;
-          border-radius: 8px;
-          padding: 32px;
+          background-color: #ffffff;
+          border:none;
+          
+          padding: 0; /* Removed padding to match Company */
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-          max-width: 800px;
+          max-width: 1200px;
           margin: 0 auto;
         }
 
         .notification-title {
-          font-size: 16px;
+          font-size: 24px;
           font-weight: 600;
           color: #333;
           margin: 0 0 32px 0;
@@ -209,8 +213,8 @@ const Notification = () => {
 
         .form-label {
           display: block;
-          font-size: 11px;
-          font-weight: 600;
+          font-size: 12px;
+          font-weight: 500; /* Updated to match Company */
           color: #6b7280;
           margin-bottom: 8px;
           text-transform: uppercase;
@@ -290,7 +294,7 @@ const Notification = () => {
           align-items: center;
           gap: 6px;
           transition: background-color 0.2s ease;
-          margin-top: 24px;
+          margin-top: 32px; /* Updated to match Company */
           height: 40px;
         }
 
@@ -313,13 +317,13 @@ const Notification = () => {
           
           .file-section,
           .notification-section {
-            padding: 20px;
+            padding: 0; /* Removed padding to match Company */
             max-width: 100%;
           }
 
           .form-grid {
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 16px; /* Updated to match Company mobile gap */
           }
 
           .file-input-container {

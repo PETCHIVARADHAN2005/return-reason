@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Theme.css';
+import {Save} from 'lucide-react';
 
 const ThemeComponent = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
@@ -109,7 +110,7 @@ const ThemeComponent = () => {
 
       {/* Save Button */}
       <button className="save-button" onClick={handleSave}>
-        ✓ Save
+        <Save size={16} /> Save
       </button>
 
       {/* Upload Modal */}

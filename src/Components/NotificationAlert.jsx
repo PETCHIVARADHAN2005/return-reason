@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Mail, MessageSquare, Bell } from 'lucide-react';
+import { Mail, MessageSquare, Bell, Save } from 'lucide-react';
 
 const NotificationAlert = () => {
   const [activeTab, setActiveTab] = useState('mail');
@@ -243,7 +244,7 @@ const NotificationAlert = () => {
         </div>
 
         <button className="save-button" onClick={handleSave}>
-          <span className="save-icon">✓</span>
+          <Save size={16} />
           SAVE
         </button>
       </div>
@@ -282,7 +283,7 @@ const NotificationAlert = () => {
         .notification-alert-container {
           background-color: #f8f9fa;
           min-height: 100vh;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
         .tab-navigation {
@@ -297,7 +298,7 @@ const NotificationAlert = () => {
           background: #f8f9fa;
           border: none;
           padding: 16px 24px;
-          font-size: 12px;
+          font-size: 14px; /* Updated to match Company */
           font-weight: 600;
           color: #6b7280;
           cursor: pointer;
@@ -326,7 +327,7 @@ const NotificationAlert = () => {
         }
 
         .form-title {
-          font-size: 16px;
+          font-size: 24px; /* Updated to match Company */
           font-weight: 600;
           color: #333;
           margin: 0 0 32px 0;
@@ -358,7 +359,7 @@ const NotificationAlert = () => {
         }
 
         .message-label {
-          font-size: 12px;
+          font-size: 12px; /* Already matches Company */
           font-weight: 500;
           color: #6b7280;
           text-transform: capitalize;
@@ -377,7 +378,7 @@ const NotificationAlert = () => {
         }
 
         .toggle-status {
-          font-size: 12px;
+          font-size: 14px; /* Updated to match Company */
           font-weight: 500;
           color: #6b7280;
           min-width: 24px;
@@ -388,7 +389,7 @@ const NotificationAlert = () => {
           padding: 12px 16px;
           border: 1px solid #d1d5db;
           border-radius: 4px;
-          font-size: 14px;
+          font-size: 14px; /* Already matches Company */
           color: #6b7280;
           resize: vertical;
           min-height: 60px;
@@ -408,7 +409,7 @@ const NotificationAlert = () => {
           border: none;
           padding: 12px 24px;
           border-radius: 4px;
-          font-size: 12px;
+          font-size: 14px; /* Updated to match Company */
           font-weight: 600;
           cursor: pointer;
           display: flex;
@@ -428,7 +429,7 @@ const NotificationAlert = () => {
         }
 
         .save-icon {
-          font-size: 14px;
+          /* Removed font-size to rely on Save component's size={16} */
         }
 
         @media (max-width: 768px) {
@@ -440,6 +441,7 @@ const NotificationAlert = () => {
             width: 100%;
             justify-content: center;
             padding: 14px 20px;
+            font-size: 14px; /* Updated to match Company */
           }
 
           .message-form {

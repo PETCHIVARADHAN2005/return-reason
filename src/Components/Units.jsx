@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Edit, Trash2 } from 'lucide-react';
+import { Edit, Trash2, Eye } from 'lucide-react';
 
 const Units = () => {
   const [units, setUnits] = useState([
@@ -161,38 +161,58 @@ const Units = () => {
                     <td style={{ padding: '16px 24px', fontSize: '14px', color: '#1f2937', borderBottom: '1px solid #f3f4f6' }}>
                       <div style={{ display: 'flex', gap: '8px' }}>
                         <button
-                          onClick={() => handleEdit(unit)}
+                          onClick={() => alert(`Viewing unit: ${unit.name}`)} // Placeholder for view action
                           style={{
-                            background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                            width: '32px',
+                            height: '32px',
+                            background: '#f8d7da', /* Light red background */
                             border: 'none',
-                            borderRadius: '6px',
-                            padding: '8px',
+                            borderRadius: '50%', /* Circular shape */
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             transition: 'all 0.2s ease',
-                            boxShadow: '0 1px 3px rgba(16, 185, 129, 0.3)'
+                            opacity: 0.9
                           }}
                         >
-                          <Edit size={16} color="white" />
+                          <Eye size={16} color="#dc3545" /> {/* Red icon for view */}
+                        </button>
+                        <button
+                          onClick={() => handleEdit(unit)}
+                          style={{
+                            width: '32px',
+                            height: '32px',
+                            background: '#d1e7dd', /* Light green background */
+                            border: 'none',
+                            borderRadius: '50%', /* Circular shape */
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s ease',
+                            opacity: 0.9
+                          }}
+                        >
+                          <Edit size={16} color="#28a745" /> {/* Green icon for edit */}
                         </button>
                         <button
                           onClick={() => handleDelete(unit.id)}
                           style={{
-                            background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                            width: '32px',
+                            height: '32px',
+                            background: '#fff3cd', /* Light orange background */
                             border: 'none',
-                            borderRadius: '6px',
-                            padding: '8px',
+                            borderRadius: '50%', /* Circular shape */
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             transition: 'all 0.2s ease',
-                            boxShadow: '0 1px 3px rgba(239, 68, 68, 0.3)'
+                            opacity: 0.9
                           }}
                         >
-                          <Trash2 size={16} color="white" />
+                          <Trash2 size={16} color="#f0ad4e" /> {/* Orange icon for delete */}
                         </button>
                       </div>
                     </td>

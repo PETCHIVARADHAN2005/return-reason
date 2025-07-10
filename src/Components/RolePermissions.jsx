@@ -137,7 +137,7 @@ const RolePermissions = () => {
                     onClick={() => handleViewDetails(role)}
                     aria-label={`View details for ${role.name}`}
                   >
-                    <Eye size={12} />
+                    <Eye size={16} />
                   </button>
                 </td>
               </tr>
@@ -362,21 +362,20 @@ const RolePermissions = () => {
 
         .user-role-permissions__action-btn {
           width: 32px;
-          height: 20px;
-           background-color: #fdd8d8;
-          color: #dc3545;
+          height: 32px;
+          background-color: #f8d7da; /* Light red background */
+          color: #dc3545; /* Red icon */
           border: none;
-          border-radius: 10px;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           transition: background-color 0.15s ease;
-          
         }
 
         .user-role-permissions__action-btn:hover {
-          background-color: #fcb8b8;
+          background-color: #f1aeb5;
         }
 
         /* Modal Styles */
@@ -535,6 +534,16 @@ const RolePermissions = () => {
             width: 70px;
           }
 
+          .user-role-permissions__action-btn {
+            width: 28px;
+            height: 28px;
+          }
+
+          .user-role-permissions__action-btn svg {
+            width: 14px;
+            height: 14px;
+          }
+
           .user-role-permissions__modal-content {
             margin: 10px;
             max-width: none;
@@ -577,6 +586,16 @@ const RolePermissions = () => {
           
           .user-role-permissions__th:last-child {
             width: 60px;
+          }
+
+          .user-role-permissions__action-btn {
+            width: 24px;
+            height: 24px;
+          }
+
+          .user-role-permissions__action-btn svg {
+            width: 12px;
+            height: 12px;
           }
 
           .user-role-permissions__modal-overlay {

@@ -231,102 +231,32 @@
   padding: 20px;
 }
 
-.form-group {
+.view-field {
   margin-bottom: 20px;
 }
 
-.form-label {
-  display: block;
-  margin-bottom: 6px;
+.view-label {
   font-weight: 500;
   color: #495057;
   font-size: 14px;
+  margin-bottom: 4px;
 }
 
-.form-input {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ced4da;
-  border-radius: 6px;
+.view-value {
+  color: #212529;
   font-size: 14px;
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-input:focus {
-  outline: none;
-  border-color: #5865f2;
-  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.25);
-}
-
-.form-textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ced4da;
-  border-radius: 6px;
-  font-size: 14px;
-  min-height: 80px;
-  resize: vertical;
-  font-family: inherit;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.form-textarea:focus {
-  outline: none;
-  border-color: #5865f2;
-  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.25);
-}
-
-.radio-group {
-  display: flex;
-  gap: 24px;
-}
-
-.radio-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.radio-input {
-  margin: 0;
-  cursor: pointer;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  padding: 16px 20px;
-  border-top: 1px solid #e9ecef;
-}
-
-.btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
+.view-status {
   font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 
-.btn-primary {
-  background: #5865f2;
-  color: white;
+.view-status.active {
+  color: #198754;
 }
 
-.btn-primary:hover {
-  background: #4752c4;
-}
-
-.btn-secondary {
-  background: #6c757d;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background: #5a6268;
+.view-status.inactive {
+  color: #dc3545;
 }
 
 .delete-modal {
@@ -369,32 +299,176 @@
   justify-content: center;
 }
 
-.view-field {
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background: #5865f2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #4752c4;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.page-modal {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page-modal::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.page-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.page-modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.page-modal-close-btn {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.page-modal-close-btn:hover {
+  color: #495057;
+}
+
+.page-modal-content {
+  padding: 20px;
+}
+
+.page-form-group {
   margin-bottom: 20px;
 }
 
-.view-label {
+.page-form-label {
+  display: block;
+  margin-bottom: 6px;
   font-weight: 500;
   color: #495057;
   font-size: 14px;
-  margin-bottom: 4px;
 }
 
-.view-value {
-  color: #212529;
+.page-form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
   font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.view-status {
+.page-form-input:focus {
+  outline: none;
+  border-color: #5865f2;
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.25);
+}
+
+.page-form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.page-form-textarea:focus {
+  outline: none;
+  border-color: #5865f2;
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.25);
+}
+
+.page-radio-group {
+  display: flex;
+  gap: 24px;
+}
+
+.page-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.page-radio-input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.page-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.page-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.view-status.active {
-  color: #198754;
+.page-btn-primary {
+  background: #5865f2;
+  color: white;
 }
 
-.view-status.inactive {
-  color: #dc3545;
+.page-btn-primary:hover {
+  background: #4752c4;
+}
+
+.page-btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.page-btn-secondary:hover {
+  background: #5a6268;
 }
 
 @media (max-width: 768px) {
@@ -478,40 +552,63 @@
     padding: 16px;
   }
 
-  .form-group {
+  .view-field {
     margin-bottom: 16px;
   }
 
-  .form-label {
+  .view-label,
+  .view-value {
     font-size: 13px;
   }
 
-  .form-input,
-  .form-textarea {
+  .page-modal {
+    margin: 16px;
+    max-width: calc(100% - 32px);
+  }
+
+  .page-modal-header h2 {
+    font-size: 16px;
+  }
+
+  .page-modal-content {
+    padding: 16px;
+  }
+
+  .page-form-group {
+    margin-bottom: 16px;
+  }
+
+  .page-form-label {
+    font-size: 13px;
+  }
+
+  .page-form-input,
+  .page-form-textarea {
     font-size: 13px;
     padding: 8px 10px;
   }
 
-  .form-textarea {
+  .page-form-textarea {
     min-height: 60px;
   }
 
-  .radio-group {
+  .page-radio-group {
     flex-direction: column;
     gap: 12px;
   }
 
-  .radio-item {
+  .page-radio-item {
     font-size: 13px;
   }
 
-  .modal-footer {
+  .page-modal-footer {
     flex-direction: column-reverse;
     gap: 8px;
     padding: 12px 16px;
   }
 
-  .btn {
+  .btn,
+  .page-btn {
     font-size: 13px;
     padding: 6px 12px;
     width: 100%;
@@ -543,15 +640,6 @@
   .warning-icon svg {
     width: 24px;
     height: 24px;
-  }
-
-  .view-field {
-    margin-bottom: 16px;
-  }
-
-  .view-label,
-  .view-value {
-    font-size: 13px;
   }
 }
 
@@ -627,33 +715,60 @@
     padding: 12px;
   }
 
-  .form-group {
+  .view-field {
     margin-bottom: 12px;
   }
 
-  .form-label {
+  .view-label,
+  .view-value {
     font-size: 12px;
   }
 
-  .form-input,
-  .form-textarea {
+  .page-modal {
+    margin: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .page-modal-header {
+    padding: 12px 16px;
+  }
+
+  .page-modal-header h2 {
+    font-size: 14px;
+  }
+
+  .page-modal-content {
+    padding: 12px;
+  }
+
+  .page-form-group {
+    margin-bottom: 12px;
+  }
+
+  .page-form-label {
+    font-size: 12px;
+  }
+
+  .page-form-input,
+  .page-form-textarea {
     font-size: 12px;
     padding: 6px 8px;
   }
 
-  .form-textarea {
+  .page-form-textarea {
     min-height: 50px;
   }
 
-  .radio-item {
+  .page-radio-item {
     font-size: 12px;
   }
 
-  .modal-footer {
+  .page-modal-footer {
     padding: 10px 12px;
   }
 
-  .btn {
+  .btn,
+  .page-btn {
     font-size: 12px;
     padding: 5px 10px;
   }
@@ -679,14 +794,5 @@
   .warning-icon svg {
     width: 20px;
     height: 20px;
-  }
-
-  .view-field {
-    margin-bottom: 12px;
-  }
-
-  .view-label,
-  .view-value {
-    font-size: 12px;
   }
 }

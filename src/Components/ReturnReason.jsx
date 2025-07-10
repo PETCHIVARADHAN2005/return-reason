@@ -109,13 +109,17 @@ const ReturnReasonComponent = () => {
                   </td>
                   <td>
                     <div className="action-buttons">
-                      <button onClick={() => handleView(reason)} className="action-btn view-btn">
+                      <button onClick={() => handleView(reason)} className="action-btn view-btn" aria-label="View">
                         <Eye size={16} />
                       </button>
-                      <button onClick={() => handleEdit(reason)} className="action-btn edit-btn">
+                      <button onClick={() => handleEdit(reason)} className="action-btn edit-btn" aria-label="Edit">
                         <Edit size={16} />
                       </button>
-                      <button onClick={() => handleDeleteClick(reason.id)} className="action-btn delete-btn">
+                      <button
+                        onClick={() => handleDeleteClick(reason.id)}
+                        className="action-btn delete-btn"
+                        aria-label="Delete"
+                      >
                         <Trash2 size={16} />
                       </button>
                     </div>
@@ -133,70 +137,88 @@ const ReturnReasonComponent = () => {
 
       {showAddEdit && (
         <div className="modal-overlay">
-          <div className="modal">
-            <div className="modal-header">
-              <h2>Edit Attribute</h2>
-              <button onClick={handleCancel} className="close-btn">
+          <div className="return-reason-modal" role="dialog" aria-labelledby="return-reason-title">
+            <div className="return-reason-modal-header">
+              <h2 id="return-reason-title">{currentReason.id ? 'Edit Return Reason' : 'Add Return Reason'}</h2>
+              <button onClick={handleCancel} className="return-reason-close-btn" aria-label="Close">
                 <X size={20} />
               </button>
             </div>
 
-            <div className="modal-content">
-              <div className="form-group">
-                <label className="form-label">Title</label>
+            <div className="return-reason-modal-content">
+              <div className="return-reason-form-group">
+                <label htmlFor="return-reason-title-input" className="return-reason-form-label">
+                  Title <span className="return-reason-required">*</span>
+                </label>
                 <input
+                  id="return-reason-title-input"
                   type="text"
                   value={currentReason.title}
                   onChange={(e) => setCurrentReason({ ...currentReason, title: e.target.value })}
-                  className="form-input"
+                  className="return-reason-form-input"
                   placeholder="Defective Product"
+                  required
+                  aria-required="true"
                 />
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Status</label>
-                <div className="radio-group">
-                  <label className="radio-item">
+              <div className="return-reason-form-group">
+                <label className="return-reason-form-label">
+                  Status <span className="return-reason-required">*</span>
+                </label>
+                <div className="return-reason-radio-group" role="radiogroup">
+                  <label className="return-reason-radio-item">
                     <input
                       type="radio"
                       name="status"
                       value="Active"
                       checked={currentReason.status === 'Active'}
                       onChange={(e) => setCurrentReason({ ...currentReason, status: e.target.value })}
-                      className="radio-input"
+                      className="return-reason-radio-input"
+                      id="return-reason-status-active"
+                      required
+                      aria-required="true"
                     />
-                    Active
+                    <span>Active</span>
                   </label>
-                  <label className="radio-item">
+                  <label className="return-reason-radio-item">
                     <input
                       type="radio"
                       name="status"
                       value="Inactive"
                       checked={currentReason.status === 'Inactive'}
                       onChange={(e) => setCurrentReason({ ...currentReason, status: e.target.value })}
-                      className="radio-input"
+                      className="return-reason-radio-input"
+                      id="return-reason-status-inactive"
+                      required
+                      aria-required="true"
                     />
-                    Inactive
+                    <span>Inactive</span>
                   </label>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Details</label>
+              <div className="return-reason-form-group">
+                <label htmlFor="return-reason-details-input" className="return-reason-form-label">
+                  Details <span className="return-reason-required">*</span>
+                </label>
                 <textarea
+                  id="return-reason-details-input"
                   value={currentReason.details}
                   onChange={(e) => setCurrentReason({ ...currentReason, details: e.target.value })}
-                  className="form-textarea"
+                  className="return-reason-form-textarea"
                   placeholder="Product arrived damaged or not functioning"
+                  required
+                  aria-required="true"
                 />
               </div>
             </div>
 
-            <div className="modal-footer">
-              <button onClick={handleSave} className="btn btn-primary">
+            <div className="return-reason-modal-footer">
+              <button onClick={handleSave} className="return-reason-btn return-reason-btn-primary" aria-label="Save changes">
                 ✓ Save
               </button>
-              <button onClick={handleCancel} className="btn btn-secondary">
+              <button onClick={handleCancel} className="return-reason-btn return-reason-btn-secondary" aria-label="Cancel">
                 ⊗ Cancel
               </button>
             </div>
@@ -206,10 +228,10 @@ const ReturnReasonComponent = () => {
 
       {showView && (
         <div className="modal-overlay">
-          <div className="modal">
+          <div className="modal" role="dialog" aria-labelledby="view-title">
             <div className="modal-header">
-              <h2>View Attribute</h2>
-              <button onClick={handleCancel} className="close-btn">
+              <h2 id="view-title">View Attribute</h2>
+              <button onClick={handleCancel} className="close-btn" aria-label="Close">
                 <X size={20} />
               </button>
             </div>
@@ -238,23 +260,23 @@ const ReturnReasonComponent = () => {
 
       {showDelete && (
         <div className="modal-overlay">
-          <div className="modal delete-modal">
+          <div className="modal delete-modal" role="dialog" aria-labelledby="delete-title">
             <div className="delete-content">
               <div className="warning-icon">
                 <AlertCircle size={32} />
               </div>
 
-              <h3 className="delete-title">Are you sure ?</h3>
+              <h3 id="delete-title" className="delete-title">Are you sure ?</h3>
 
               <p className="delete-message">
                 You will not be able to recover the deleted record!
               </p>
 
               <div className="delete-buttons">
-                <button onClick={handleDelete} className="btn btn-primary">
+                <button onClick={handleDelete} className="btn btn-primary" aria-label="Confirm delete">
                   Yes, Delete it !
                 </button>
-                <button onClick={handleCancel} className="btn btn-secondary">
+                <button onClick={handleCancel} className="btn btn-secondary" aria-label="Cancel delete">
                   No, Cancel !
                 </button>
               </div>

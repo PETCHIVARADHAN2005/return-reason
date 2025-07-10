@@ -70,7 +70,7 @@ const SupplierComponent = () => {
         <h2>Supplier</h2>
         <div className="header-actions">
           <button className="add-btn" onClick={() => openModal('add')}>
-            <Plus size={16} />
+            <Plus size={16} />Add
           </button>
         </div>
       </div>
@@ -95,13 +95,13 @@ const SupplierComponent = () => {
               <td>
                 <div className="action-buttons">
                   <button className="action-btn view-btn" onClick={() => openModal('view')}>
-                    <Eye size={14} />
+                    <Eye size={14} color="#dc3545" /> {/* Red for view */}
                   </button>
                   <button className="action-btn edit-btn" onClick={() => openModal('edit')}>
-                    <Edit size={14} />
+                    <Edit size={14} color="#28a745" /> {/* Green for edit */}
                   </button>
                   <button className="action-btn delete-btn" onClick={() => openModal('delete')}>
-                    <Trash2 size={14} />
+                    <Trash2 size={14} color="#f0ad4e" /> {/* Orange for delete */}
                   </button>
                 </div>
               </td>
@@ -418,42 +418,43 @@ const SupplierComponent = () => {
         }
 
         .action-btn {
-          width: 28px;
-          height: 28px;
+          width: 32px;
+          height: 32px;
           border: none;
-          border-radius: 50%;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           transition: all 0.2s;
-        }
-
-        .delete-btn {
-          background: #fecaca;
-          color: #dc2626;
-        }
-
-        .delete-btn:hover {
-          background: #fee2e2;
-        }
-
-        .edit-btn {
-          background: #d1fae5;
-          color: #059669;
-        }
-
-        .edit-btn:hover {
-          background: #ecfdf5;
+          opacity: 0.9;
         }
 
         .view-btn {
-          background: #fef3c7;
-          color: #d97706;
+          background: #f8d7da; /* Light red background */
         }
 
         .view-btn:hover {
-          background: #fffbeb;
+          background: #f1aeb5;
+          transform: scale(1.05);
+        }
+
+        .edit-btn {
+          background: #d1e7dd; /* Light green background */
+        }
+
+        .edit-btn:hover {
+          background: #a3cfbb;
+          transform: scale(1.05);
+        }
+
+        .delete-btn {
+          background: #fff3cd; /* Light orange background */
+        }
+
+        .delete-btn:hover {
+          background: #ffeaa7;
+          transform: scale(1.05);
         }
 
         .table-footer {

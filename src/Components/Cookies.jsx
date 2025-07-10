@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Save} from 'lucide-react';
 const Cookies = () => {
   const [cookiesData, setCookiesData] = useState({
     detailsPage: '',
@@ -30,7 +30,7 @@ const Cookies = () => {
       margin: '0 auto',
       padding: '24px',
       backgroundColor: 'white',
-      fontFamily: 'Arial, sans-serif'
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     }}>
       <h2 style={{
         fontSize: '20px',
@@ -44,9 +44,9 @@ const Cookies = () => {
         <div style={{ marginBottom: '24px' }}>
           <label style={{
             display: 'block',
-            fontSize: '14px',
-            fontWeight: '500',
-            color: '#374151',
+            fontSize: '12px', // Updated to match your specification
+            fontWeight: '500', // Updated to match your specification
+            color: '#666666', // Updated to match your specification
             marginBottom: '8px'
           }}>
             COOKIES DETAILS PAGE <span style={{ color: '#ef4444' }}>*</span>
@@ -175,9 +175,9 @@ const Cookies = () => {
         <div style={{ marginBottom: '24px' }}>
           <label style={{
             display: 'block',
-            fontSize: '14px',
-            fontWeight: '500',
-            color: '#374151',
+            fontSize: '12px', // Updated to match your specification
+            fontWeight: '500', // Updated to match your specification
+            color: '#666666', // Updated to match your specification
             marginBottom: '8px'
           }}>
             COOKIES SUMMARY <span style={{ color: '#ef4444' }}>*</span>
@@ -194,7 +194,7 @@ const Cookies = () => {
               fontSize: '14px',
               outline: 'none',
               resize: 'none',
-              fontFamily: 'Arial, sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
               boxSizing: 'border-box'
             }}
             onFocus={(e) => {
@@ -217,7 +217,7 @@ const Cookies = () => {
           alignItems: 'center',
           gap: '8px',
           padding: '8px 24px',
-          backgroundColor: '#3b82f6',
+          backgroundColor: '#6366f1',
           color: 'white',
           border: 'none',
           borderRadius: '6px',
@@ -228,9 +228,7 @@ const Cookies = () => {
         onMouseOver={(e) => e.target.style.backgroundColor = '#2563eb'}
         onMouseOut={(e) => e.target.style.backgroundColor = '#3b82f6'}
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="20,6 9,17 4,12"></polyline>
-        </svg>
+         <Save size={16} />
         Save
       </button>
     </div>

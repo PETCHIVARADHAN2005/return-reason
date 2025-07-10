@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Shipping.css';
-
+import { Save } from 'lucide-react';
 const ShippingSetup = () => {
   const [selectedMethod, setSelectedMethod] = useState('PRODUCT_WISE');
   const [flatRateCost, setFlatRateCost] = useState('');
@@ -67,7 +67,7 @@ const ShippingSetup = () => {
         </div>
         
         <button className="save-btn primary" onClick={handleSave}>
-          ✓ Save
+          <Save size={16} />Save
         </button>
       </div>
 
@@ -87,7 +87,7 @@ const ShippingSetup = () => {
             />
           </div>
           <button className="save-btn primary" onClick={handleSave}>
-            ✓ Save
+            <Save size={16} /> Save
           </button>
         </div>
       )}
@@ -108,7 +108,7 @@ const ShippingSetup = () => {
             />
           </div>
           <button className="save-btn primary" onClick={handleSave}>
-            ✓ Save
+            <Save size={16} /> Save
           </button>
         </div>
       )}

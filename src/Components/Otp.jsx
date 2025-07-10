@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown,Save } from 'lucide-react';
 
 const OTPComponent = () => {
   const [otpType, setOtpType] = useState('');
@@ -16,9 +17,9 @@ const OTPComponent = () => {
 
   return (
     <div className="otp-container">
-      <div className="otp-card">
-        <h2 className="otp-title">OTP</h2>
-        
+      <h2 className="otp-title">OTP</h2>
+      
+      <div className="form-row">
         <div className="form-group">
           <label className="form-label">
             OTP TYPE <span className="required">*</span>
@@ -56,54 +57,46 @@ const OTPComponent = () => {
             <ChevronDown className="select-icon" size={16} />
           </div>
         </div>
-
-        <div className="form-group">
-          <label className="form-label">
-            OTP EXPIRE TIME <span className="required">*</span>
-          </label>
-          <div className="select-container">
-            <select 
-              className="form-select"
-              value={otpExpireTime}
-              onChange={(e) => setOtpExpireTime(e.target.value)}
-            >
-              <option value="">--</option>
-              <option value="1">1 minute</option>
-              <option value="2">2 minutes</option>
-              <option value="5">5 minutes</option>
-              <option value="10">10 minutes</option>
-              <option value="15">15 minutes</option>
-            </select>
-            <ChevronDown className="select-icon" size={16} />
-          </div>
-        </div>
-
-        <button className="save-button" onClick={handleSave}>
-          <span className="save-icon">✓</span>
-          Save
-        </button>
       </div>
+
+      <div className="form-group">
+        <label className="form-label">
+          OTP EXPIRE TIME <span className="required">*</span>
+        </label>
+        <div className="select-container">
+          <select 
+            className="form-select"
+            value={otpExpireTime}
+            onChange={(e) => setOtpExpireTime(e.target.value)}
+          >
+            <option value="">--</option>
+            <option value="1">1 minute</option>
+            <option value="2">2 minutes</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+          </select>
+          <ChevronDown className="select-icon" size={16} />
+        </div>
+      </div>
+
+      <button className="save-button" onClick={handleSave}>
+        <Save size={16} />
+        Save
+      </button>
 
       <style jsx>{`
         .otp-container {
-          padding: 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 24px;
           background-color: #f8f9fa;
           min-height: 100vh;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .otp-card {
-          background: white;
-          border-radius: 8px;
-          padding: 32px;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-          max-width: 800px;
-          width: 100%;
-          margin: 0 auto;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
         .otp-title {
-          font-size: 16px;
+          font-size: 24px;
           font-weight: 600;
           color: #333;
           margin: 0 0 32px 0;
@@ -111,27 +104,21 @@ const OTPComponent = () => {
           border-bottom: 1px solid #e5e7eb;
         }
 
-        .form-group {
+        .form-row {
+          display: flex;
+          gap: 24px;
           margin-bottom: 24px;
-          display: inline-block;
-          width: 48%;
-          margin-right: 4%;
         }
 
-        .form-group:nth-child(even) {
-          margin-right: 0;
-        }
-
-        .form-group:last-of-type {
-          width: 48%;
-          margin-right: 0;
-          display: block;
+        .form-group {
+          margin-bottom: 0; /* Removed to avoid double margin with form-row */
+          flex: 1;
         }
 
         .form-label {
           display: block;
-          font-size: 11px;
-          font-weight: 600;
+          font-size: 12px;
+          font-weight: 500;
           color: #6b7280;
           margin-bottom: 8px;
           text-transform: uppercase;
@@ -213,20 +200,14 @@ const OTPComponent = () => {
           .otp-container {
             padding: 16px;
           }
-          
-          .otp-card {
-            padding: 24px;
-            max-width: 100%;
+
+          .form-row {
+            flex-direction: column;
+            gap: 16px;
           }
 
           .form-group {
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 20px;
-          }
-
-          .form-group:last-of-type {
-            width: 100%;
+            max-width: 100%;
           }
         }
       `}</style>

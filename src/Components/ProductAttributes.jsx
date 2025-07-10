@@ -91,19 +91,19 @@ const ProductAttributes = () => {
                         className="product-attributes-action-btn product-attributes-view-btn"
                         onClick={() => handleView(attribute)}
                       >
-                        <Eye size={14} />
+                        <Eye size={14} color="#dc3545" /> {/* Red for view */}
                       </button>
                       <button 
                         className="product-attributes-action-btn product-attributes-edit-btn"
                         onClick={() => handleEdit(attribute)}
                       >
-                        <Edit size={14} />
+                        <Edit size={14} color="#28a745" /> {/* Green for edit */}
                       </button>
                       <button 
                         className="product-attributes-action-btn product-attributes-delete-btn"
                         onClick={() => handleDelete(attribute)}
                       >
-                        <Trash2 size={14} />
+                        <Trash2 size={14} color="#f0ad4e" /> {/* Orange for delete */}
                       </button>
                     </div>
                   </td>
@@ -388,41 +388,43 @@ const ProductAttributes = () => {
         }
 
         .product-attributes-action-btn {
+          width: 32px;
+          height: 32px;
           border: none;
-          border-radius: 4px;
-          padding: 6px 8px;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           transition: all 0.2s;
+          opacity: 0.9;
         }
 
         .product-attributes-view-btn {
-          background: #fecaca;
-          color: #dc2626;
+          background: #f8d7da; /* Light red background */
         }
 
         .product-attributes-view-btn:hover {
-          background: #fca5a5;
+          background: #f1aeb5;
+          transform: scale(1.05);
         }
 
         .product-attributes-edit-btn {
-          background: #bbf7d0;
-          color: #16a34a;
+          background: #d1e7dd; /* Light green background */
         }
 
         .product-attributes-edit-btn:hover {
-          background: #86efac;
+          background: #a3cfbb;
+          transform: scale(1.05);
         }
 
         .product-attributes-delete-btn {
-          background: #fed7aa;
-          color: #ea580c;
+          background: #fff3cd; /* Light orange background */
         }
 
         .product-attributes-delete-btn:hover {
-          background: #fdba74;
+          background: #ffeaa7;
+          transform: scale(1.05);
         }
 
         .product-attributes-footer {

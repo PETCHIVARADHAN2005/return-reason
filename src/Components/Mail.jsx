@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Save } from 'lucide-react';
 import './Mail.css';
 
 const Mail = () => {
@@ -145,7 +146,7 @@ const Mail = () => {
       </div>
       
       <button className="save-button" onClick={handleSave}>
-        <span className="save-icon">✓</span>
+        <Save size={16} />
         Save
       </button>
     </div>

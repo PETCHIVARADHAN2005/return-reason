@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Edit3, Trash2, X, Check, AlertCircle } from 'lucide-react';
+import { Plus, Edit, Trash2, X, Check, AlertCircle, Eye } from 'lucide-react';
 
 const LanguagesComponent = () => {
   const [languages, setLanguages] = useState([
@@ -49,6 +49,11 @@ const LanguagesComponent = () => {
   const handleDeleteLanguage = (language) => {
     setDeletingLanguage(language);
     setShowDeleteModal(true);
+  };
+
+  const handleViewLanguage = (language) => {
+    // Placeholder for view action (e.g., open modal or alert)
+    alert(`Viewing details for ${language.name}`);
   };
 
   const handleSaveLanguage = () => {
@@ -191,30 +196,47 @@ const LanguagesComponent = () => {
           gap: 8px;
         }
 
-        .lang-mgmt-edit-btn,
-        .lang-mgmt-delete-btn {
-          background: none;
+        .lang-mgmt-action-btn {
+          width: 32px;
+          height: 32px;
           border: none;
-          padding: 8px;
-          border-radius: 6px;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           transition: background-color 0.2s;
+          opacity: 0.9;
+        }
+
+        .lang-mgmt-view-btn {
+          background-color: #f8d7da; /* Light red background */
+          color: #dc3545; /* Red icon */
+        }
+
+        .lang-mgmt-view-btn:hover {
+          background-color: #f1aeb5;
+          transform: scale(1.05);
         }
 
         .lang-mgmt-edit-btn {
-          color: #2563eb;
+          background-color: #d1e7dd; /* Light green background */
+          color: #28a745; /* Green icon */
         }
 
         .lang-mgmt-edit-btn:hover {
-          background-color: #dbeafe;
+          background-color: #a3cfbb;
+          transform: scale(1.05);
         }
 
         .lang-mgmt-delete-btn {
-          color: #dc2626;
+          background-color: #fff3cd; /* Light orange background */
+          color: #f0ad4e; /* Orange icon */
         }
 
         .lang-mgmt-delete-btn:hover {
-          background-color: #fee2e2;
+          background-color: #ffeaa7;
+          transform: scale(1.05);
         }
 
         .lang-mgmt-pagination {
@@ -548,6 +570,76 @@ const LanguagesComponent = () => {
         .text-red-500 {
           color: #ef4444;
         }
+
+        @media (max-width: 768px) {
+          .lang-mgmt-container {
+            padding: 16px;
+          }
+
+          .lang-mgmt-header {
+            padding: 16px;
+          }
+
+          .lang-mgmt-th,
+          .lang-mgmt-td {
+            padding: 12px 16px;
+          }
+
+          .lang-mgmt-actions button {
+            width: 28px;
+            height: 28px;
+          }
+
+          .lang-mgmt-actions button svg {
+            width: 14px;
+            height: 14px;
+          }
+
+          .lang-mgmt-modal-header,
+          .lang-mgmt-modal-body,
+          .lang-mgmt-modal-footer {
+            padding: 16px;
+          }
+
+          .lang-mgmt-modal {
+            max-width: 400px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .lang-mgmt-container {
+            padding: 12px;
+          }
+
+          .lang-mgmt-header {
+            padding: 12px;
+          }
+
+          .lang-mgmt-th,
+          .lang-mgmt-td {
+            padding: 10px 12px;
+          }
+
+          .lang-mgmt-actions button {
+            width: 24px;
+            height: 24px;
+          }
+
+          .lang-mgmt-actions button svg {
+            width: 12px;
+            height: 12px;
+          }
+
+          .lang-mgmt-modal {
+            max-width: 320px;
+          }
+
+          .lang-mgmt-modal-header,
+          .lang-mgmt-modal-body,
+          .lang-mgmt-modal-footer {
+            padding: 12px;
+          }
+        }
       `}</style>
       
       <div className="lang-mgmt-container">
@@ -593,14 +685,20 @@ const LanguagesComponent = () => {
                   <td className="lang-mgmt-td">
                     <div className="lang-mgmt-actions">
                       <button
-                        onClick={() => handleEditLanguage(language)}
-                        className="lang-mgmt-edit-btn"
+                        onClick={() => handleViewLanguage(language)}
+                        className="lang-mgmt-action-btn lang-mgmt-view-btn"
                       >
-                        <Edit3 size={16} />
+                        <Eye size={16} />
+                      </button>
+                      <button
+                        onClick={() => handleEditLanguage(language)}
+                        className="lang-mgmt-action-btn lang-mgmt-edit-btn"
+                      >
+                        <Edit size={16} />
                       </button>
                       <button
                         onClick={() => handleDeleteLanguage(language)}
-                        className="lang-mgmt-delete-btn"
+                        className="lang-mgmt-action-btn lang-mgmt-delete-btn"
                       >
                         <Trash2 size={16} />
                       </button>

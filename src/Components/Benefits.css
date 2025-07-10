@@ -169,39 +169,43 @@
     width: 32px;
     height: 32px;
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular shape */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s;
+    opacity: 0.9;
 }
 
 .benefits-action-view {
-    background: #ffe4e1;
-    color: #ff6b6b;
+    background: #f8d7da; /* Light red background */
+    color: #dc3545; /* Red icon */
 }
 
 .benefits-action-view:hover {
-    background: #ffd0cc;
+    background: #f1aeb5;
+    transform: scale(1.05);
 }
 
 .benefits-action-edit {
-    background: #d1f2eb;
-    color: #00d084;
+    background: #d1e7dd; /* Light green background */
+    color: #28a745; /* Green icon */
 }
 
 .benefits-action-edit:hover {
-    background: #b8ede0;
+    background: #a3cfbb;
+    transform: scale(1.05);
 }
 
 .benefits-action-delete {
-    background: #fee2e2;
-    color: #dc2626;
+    background: #fff3cd; /* Light orange background */
+    color: #f0ad4e; /* Orange icon */
 }
 
 .benefits-action-delete:hover {
-    background: #fecaca;
+    background: #ffeaa7;
+    transform: scale(1.05);
 }
 
 /* Table Footer */
@@ -525,7 +529,6 @@
         flex-direction: column;
     }
 }
-/* Existing styles remain unchanged, add or modify these as needed */
 
 /* View Modal Content */
 .benefits-view-content {

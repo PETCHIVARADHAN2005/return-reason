@@ -181,39 +181,76 @@
   color: #dc2626;
 }
 
+/* Action Buttons - Updated to match the original design */
 .location-action-buttons {
   display: flex;
   gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .location-action-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%; /* Make them circular like the original */
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
+/* Edit Button - Green background */
 .location-edit-btn {
-  background: #fef3c7;
-  color: #f59e0b;
+  background: #dcfce7; /* Light green background */
+  color: #16a34a; /* Dark green icon */
 }
 
 .location-edit-btn:hover {
-  background: #fde68a;
+  background: #bbf7d0; /* Slightly darker green on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(22, 163, 74, 0.2);
 }
 
+.location-edit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(22, 163, 74, 0.2);
+}
+
+/* Delete Button - Yellow/Orange background */
 .location-delete-btn {
-  background: #fee2e2;
-  color: #ef4444;
+  background: #fef3c7; /* Light yellow background */
+  color: #f59e0b; /* Orange icon */
 }
 
 .location-delete-btn:hover {
-  background: #fecaca;
+  background: #fde68a; /* Slightly darker yellow on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+}
+
+.location-delete-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(245, 158, 11, 0.2);
+}
+
+/* If you want to add a View button (pink) - Optional */
+.location-view-btn {
+  background: #fce7f3; /* Light pink background */
+  color: #ec4899; /* Pink icon */
+}
+
+.location-view-btn:hover {
+  background: #fbcfe8; /* Slightly darker pink on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(236, 72, 153, 0.2);
+}
+
+.location-view-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(236, 72, 153, 0.2);
 }
 
 /* Pagination */
@@ -506,10 +543,27 @@
 /* Focus States */
 .location-btn:focus,
 .location-icon-btn:focus,
-.location-action-btn:focus,
 .location-pagination-btn:focus {
   outline: 2px solid #6366f1;
   outline-offset: 2px;
+}
+
+/* Focus states for action buttons */
+.location-action-btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.location-edit-btn:focus {
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.3);
+}
+
+.location-delete-btn:focus {
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+}
+
+.location-view-btn:focus {
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
 }
 
 .location-search-group input:focus,
@@ -545,6 +599,23 @@
   to {
     opacity: 1;
   }
+}
+
+/* Animation for action buttons */
+@keyframes location-button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.location-action-btn:hover {
+  animation: location-button-pulse 0.3s ease-in-out;
 }
 
 /* Responsive Design */
@@ -585,6 +656,15 @@
   .location-data-table th,
   .location-data-table td {
     padding: 8px;
+  }
+  
+  .location-action-btn {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .location-action-buttons {
+    gap: 6px;
   }
   
   .location-pagination {
@@ -661,6 +741,10 @@
   .location-action-btn {
     width: 28px;
     height: 28px;
+  }
+  
+  .location-action-buttons {
+    gap: 4px;
   }
   
   .location-status {
@@ -801,6 +885,34 @@
   .location-select-icon {
     color: #94a3b8;
   }
+  
+  /* Dark mode action buttons */
+  .location-edit-btn {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+  }
+  
+  .location-edit-btn:hover {
+    background: rgba(34, 197, 94, 0.3);
+  }
+  
+  .location-delete-btn {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+  }
+  
+  .location-delete-btn:hover {
+    background: rgba(245, 158, 11, 0.3);
+  }
+  
+  .location-view-btn {
+    background: rgba(236, 72, 153, 0.2);
+    color: #f472b6;
+  }
+  
+  .location-view-btn:hover {
+    background: rgba(236, 72, 153, 0.3);
+  }
 }
 
 /* High Contrast Mode */
@@ -853,13 +965,19 @@
   .location-edit-btn {
     background: #fff;
     color: #000;
-    border: 2px solid #000;
+    border: 2px solid #16a34a;
   }
   
   .location-delete-btn {
-    background: #000;
-    color: #fff;
-    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    border: 2px solid #f59e0b;
+  }
+  
+  .location-view-btn {
+    background: #fff;
+    color: #000;
+    border: 2px solid #ec4899;
   }
 }
 
@@ -882,6 +1000,10 @@
   }
   
   .location-modal-overlay {
+    animation: none;
+  }
+  
+  .location-action-btn:hover {
     animation: none;
   }
 }
@@ -921,6 +1043,48 @@
 
 .location-modal::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Tooltip styles for action buttons */
+.location-action-btn[data-tooltip] {
+  position: relative;
+}
+
+.location-action-btn[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 1000;
+  margin-bottom: 4px;
+}
+
+.location-action-btn[data-tooltip]::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #1f2937;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.location-action-btn[data-tooltip]:hover::before,
+.location-action-btn[data-tooltip]:hover::after {
+  opacity: 1;
 }
 
 /* Utility Classes */
@@ -995,6 +1159,7 @@
 .location-p-3 {
   padding: 24px;
 }
+
 
 .location-hidden {
   display: none;

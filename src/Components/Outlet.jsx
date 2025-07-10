@@ -123,7 +123,7 @@ const Outlets = () => {
         <h2 className="outlet-title">OUTLETS</h2>
         <div className="outlet-actions">
           <button className="outlet-btn outlet-btn-add" onClick={() => openModal('add')}>
-            <Plus size={18} />
+            <Plus size={18} />Add
           </button>
         </div>
       </div>

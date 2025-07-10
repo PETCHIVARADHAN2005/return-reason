@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './License.css';
+import { Save } from 'lucide-react';
 
 const License = () => {
   const [licenseKey, setLicenseKey] = useState('Shiralure');
@@ -30,9 +31,7 @@ const License = () => {
         
         <div className="license-actions">
           <button onClick={handleSave} className="save-button">
-            <svg className="save-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
+            <Save size={16} />
             Save
           </button>
         </div>

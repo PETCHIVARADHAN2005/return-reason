@@ -1,9 +1,8 @@
-/* SliderManagement.css */
 .slider-management-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font stack */
   background-color: #f8f9fa;
   min-height: 100vh;
 }
@@ -17,11 +16,12 @@
 }
 
 .slider-management-title {
-  font-size: 16px;
+  font-size: 22px; /* Increased from 20px for better prominence */
   font-weight: 600;
   color: #333;
   margin: 0;
   letter-spacing: 0.5px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-add-btn {
@@ -34,7 +34,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 15px; /* Increased from 14px */
+  font-weight: 500;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-add-btn:hover {
@@ -59,11 +62,12 @@
 
 .slider-th {
   padding: 15px 20px;
-  font-size: 11px;
+  font-size: 14px; /* Increased from 13px */
   font-weight: 600;
   color: #6b7280;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-table-row {
@@ -85,16 +89,18 @@
   padding: 15px 20px;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   color: #374151;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-status {
   padding: 4px 12px;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 13px; /* Increased from 12px */
   font-weight: 500;
   text-transform: capitalize;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-status-active {
@@ -116,48 +122,50 @@
   align-items: center;
   justify-content: center;
   width: 32px;
-  height: 28px;
-  border: 1px solid;
-  border-radius: 4px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s;
-  background-color: white;
+  opacity: 0.9;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-view-btn {
-  color: #6366f1;
-  border-color: #6366f1;
+  background-color: #f8d7da;
+  color: #dc3545;
 }
 
 .slider-view-btn:hover {
-  background-color: #6366f1;
-  color: white;
+  background-color: #f1aeb5;
+  transform: scale(1.05);
 }
 
 .slider-edit-btn {
-  color: #10b981;
-  border-color: #10b981;
+  background-color: #d1e7dd;
+  color: #28a745;
 }
 
 .slider-edit-btn:hover {
-  background-color: #10b981;
-  color: white;
+  background-color: #a3cfbb;
+  transform: scale(1.05);
 }
 
 .slider-delete-btn {
-  color: #ef4444;
-  border-color: #ef4444;
+  background-color: #fff3cd;
+  color: #f0ad4e;
 }
 
 .slider-delete-btn:hover {
-  background-color: #ef4444;
-  color: white;
+  background-color: #ffeaa7;
+  transform: scale(1.05);
 }
 
 .slider-table-info {
   color: #6b7280;
-  font-size: 13px;
+  font-size: 15px; /* Increased from 14px */
   margin-bottom: 20px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 /* Modal Overlay */
@@ -195,10 +203,11 @@
 
 .slider-modal-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 22px; /* Increased from 20px */
   font-weight: 600;
   color: #374151;
   letter-spacing: 0.5px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-close-btn {
@@ -209,6 +218,7 @@
   padding: 4px;
   border-radius: 4px;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-close-btn:hover {
@@ -232,12 +242,13 @@
 
 .slider-form-label {
   display: block;
-  font-size: 11px;
+  font-size: 14px; /* Increased from 13px */
   font-weight: 600;
   color: #6b7280;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-required {
@@ -249,9 +260,10 @@
   padding: 10px 12px;
   border: 1px solid #d1d5db;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   transition: border-color 0.2s;
   box-sizing: border-box;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-form-input:focus {
@@ -264,10 +276,11 @@
   padding: 10px 12px;
   border: 1px solid #d1d5db;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   resize: vertical;
   font-family: inherit;
   box-sizing: border-box;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-form-textarea:focus {
@@ -290,8 +303,10 @@
   color: white;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 15px; /* Increased from 14px */
+  font-weight: 500;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-file-btn:hover {
@@ -301,7 +316,8 @@
 
 .slider-file-text {
   color: #6b7280;
-  font-size: 13px;
+  font-size: 15px; /* Increased from 14px */
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-radio-group {
@@ -314,12 +330,13 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   color: #374151;
   cursor: pointer;
   text-transform: none;
   font-weight: normal;
   margin-bottom: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-radio-input {
@@ -341,10 +358,11 @@
   border: none;
   padding: 10px 16px;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 15px; /* Increased from 14px */
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-save-btn:hover {
@@ -357,10 +375,11 @@
   border: none;
   padding: 10px 16px;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 15px; /* Increased from 14px */
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-clear-btn:hover {
@@ -386,10 +405,11 @@
 
 .slider-view-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 22px; /* Increased from 20px */
   font-weight: 600;
   color: #374151;
   letter-spacing: 0.5px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-view-content {
@@ -415,9 +435,10 @@
 
 .slider-info-title {
   margin: 0 0 8px 0;
-  font-size: 16px;
+  font-size: 16px; /* Increased from 15px */
   font-weight: 500;
   color: #374151;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 /* Delete Modal */
@@ -437,16 +458,18 @@
 }
 
 .slider-delete-title {
-  font-size: 18px;
+  font-size: 18px; /* Increased from 17px */
   font-weight: 600;
   color: #374151;
   margin: 0 0 8px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-delete-text {
   color: #6b7280;
+  font-size: 15px; /* Increased from 14px */
   margin-bottom: 24px;
-  font-size: 14px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-delete-actions {
@@ -461,10 +484,11 @@
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-confirm-btn:hover {
@@ -477,10 +501,11 @@
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-cancel-btn:hover {
@@ -525,16 +550,18 @@
 }
 
 .slider-empty-title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 18px; /* Increased from 17px */
+  font-weight: 600;
   color: #374151;
   margin-bottom: 8px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-empty-text {
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   color: #6b7280;
   margin-bottom: 20px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-empty-btn {
@@ -543,10 +570,11 @@
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-empty-btn:hover {
@@ -573,8 +601,9 @@
   color: #dc2626;
   padding: 12px 16px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   margin-bottom: 16px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-success {
@@ -583,8 +612,9 @@
   color: #16a34a;
   padding: 12px 16px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px; /* Increased from 14px */
   margin-bottom: 16px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 /* Responsive */
@@ -668,22 +698,23 @@
   }
   
   .slider-management-title {
-    font-size: 14px;
+    font-size: 18px; /* Adjusted for smaller screens */
   }
   
   .slider-add-btn {
     padding: 6px 8px;
+    font-size: 14px;
   }
   
   .slider-th,
   .slider-td {
     padding: 10px 12px;
-    font-size: 13px;
+    font-size: 14px; /* Increased from 13px */
   }
   
   .slider-action-btn {
     width: 28px;
-    height: 24px;
+    height: 28px;
   }
   
   .slider-modal-body {
@@ -698,6 +729,7 @@
   .slider-clear-btn {
     width: 100%;
     justify-content: center;
+    font-size: 14px;
   }
   
   .slider-delete-modal {
@@ -705,6 +737,7 @@
   }
 }
 
+/* Rest of the CSS remains unchanged (e.g., focus, animations, dark mode, etc.) */
 .slider-add-btn:focus,
 .slider-action-btn:focus,
 .slider-close-btn:focus,
@@ -764,8 +797,7 @@
 }
 
 .slider-action-btn {
-  opacity: 0.7;
-  transition: opacity 0.2s, background-color 0.2s, color 0.2s;
+  transition: opacity 0.2s, background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .slider-action-btn:hover {
@@ -813,12 +845,13 @@
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 13px; /* Increased from 12px */
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0.2s;
   z-index: 1000;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-tooltip:hover::after {
@@ -1033,6 +1066,7 @@
   cursor: pointer;
   font-size: 12px;
   transition: background-color 0.2s;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-image-remove-btn:hover {
@@ -1048,20 +1082,24 @@
 
 .slider-form-error {
   color: #ef4444;
-  font-size: 12px;
+  font-size: 13px; /* Increased from 12px */
+  font-weight: 500;
   margin-top: 4px;
   display: flex;
   align-items: center;
   gap: 4px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 .slider-form-success {
   color: #10b981;
-  font-size: 12px;
+  font-size: 13px; /* Increased from 12px */
+  font-weight: 500;
   margin-top: 4px;
   display: flex;
   align-items: center;
   gap: 4px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
 }
 
 /* Skeleton Loading */

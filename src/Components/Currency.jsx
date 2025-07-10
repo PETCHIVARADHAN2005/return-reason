@@ -94,11 +94,8 @@ const CurrencyComponent = () => {
         <h2>CURRENCIES</h2>
         <div className="header-buttons">
           <button className="btn-primary" onClick={handleAdd}>
-            <Plus size={16} />
+            <Plus size={16} />Add
           </button>
-          {/* <button className="btn-secondary">
-            <RotateCcw size={16} />
-          </button> */}
         </div>
       </div>
 
@@ -128,13 +125,13 @@ const CurrencyComponent = () => {
                 className="action-btn edit-btn" 
                 onClick={() => handleEdit(currency)}
               >
-                <Edit size={16} />
+                <Edit size={16} color="#28a745" /> {/* Green for edit */}
               </button>
               <button 
                 className="action-btn delete-btn" 
                 onClick={() => handleDelete(currency.id)}
               >
-                <Trash2 size={16} />
+                <Trash2 size={16} color="#f0ad4e" /> {/* Orange for delete */}
               </button>
             </div>
           </div>
@@ -258,7 +255,7 @@ const CurrencyComponent = () => {
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Updated font stack */
         }
 
         .currency-header {
@@ -270,9 +267,10 @@ const CurrencyComponent = () => {
 
         .currency-header h2 {
           margin: 0;
-          font-size: 18px;
+          font-size: 20px; /* Increased from 18px */
           font-weight: 600;
           color: #333;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .header-buttons {
@@ -290,7 +288,8 @@ const CurrencyComponent = () => {
           display: flex;
           align-items: center;
           gap: 6px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .btn-primary:hover {
@@ -307,6 +306,8 @@ const CurrencyComponent = () => {
           display: flex;
           align-items: center;
           gap: 6px;
+          font-size: 15px; /* Increased from 14px */
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .btn-secondary:hover {
@@ -328,9 +329,10 @@ const CurrencyComponent = () => {
           background: #f9fafb;
           border-bottom: 1px solid #e5e7eb;
           font-weight: 600;
-          font-size: 12px;
+          font-size: 13px; /* Increased from 12px */
           color: #374151;
           text-transform: uppercase;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .table-row {
@@ -348,10 +350,12 @@ const CurrencyComponent = () => {
 
         .yes {
           color: #10b981;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .no {
           color: #ef4444;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .col-action {
@@ -360,38 +364,42 @@ const CurrencyComponent = () => {
         }
 
         .action-btn {
-          padding: 6px;
+          width: 32px;
+          height: 32px;
           border: none;
-          border-radius: 4px;
+          border-radius: 50%; /* Circular shape */
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.2s;
+          opacity: 0.9;
         }
 
         .edit-btn {
           background: #dcfce7;
-          color: #16a34a;
         }
 
         .edit-btn:hover {
           background: #bbf7d0;
+          transform: scale(1.05);
         }
 
         .delete-btn {
           background: #fef2f2;
-          color: #dc2626;
         }
 
         .delete-btn:hover {
           background: #fee2e2;
+          transform: scale(1.05);
         }
 
         .table-footer {
           padding: 16px 20px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           color: #6b7280;
           background: #f9fafb;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .modal-overlay {
@@ -426,8 +434,9 @@ const CurrencyComponent = () => {
 
         .modal-header h3 {
           margin: 0;
-          font-size: 18px;
+          font-size: 20px; /* Increased from 18px */
           font-weight: 600;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .close-btn {
@@ -436,6 +445,7 @@ const CurrencyComponent = () => {
           cursor: pointer;
           padding: 4px;
           color: #6b7280;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .close-btn:hover {
@@ -459,22 +469,25 @@ const CurrencyComponent = () => {
         }
 
         .form-group label {
-          font-size: 12px;
+          font-size: 13px; /* Increased from 12px */
           font-weight: 600;
           color: #374151;
           margin-bottom: 8px;
           text-transform: uppercase;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .required {
           color: #ef4444;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .form-group input {
           padding: 12px;
           border: 1px solid #d1d5db;
           border-radius: 6px;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .form-group input:focus {
@@ -494,10 +507,11 @@ const CurrencyComponent = () => {
           align-items: center;
           gap: 8px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           text-transform: none;
           font-weight: normal;
           margin-bottom: 0;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .radio-label input[type="radio"] {
@@ -528,13 +542,16 @@ const CurrencyComponent = () => {
 
         .delete-modal h3 {
           margin: 0 0 10px 0;
-          font-size: 20px;
+          font-size: 20px; /* Increased from 20px */
           color: #374151;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .delete-modal p {
           margin: 0 0 30px 0;
           color: #6b7280;
+          font-size: 15px; /* Increased from default */
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .delete-actions {
@@ -550,8 +567,9 @@ const CurrencyComponent = () => {
           padding: 12px 24px;
           border-radius: 6px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .btn-danger:hover {
@@ -565,8 +583,9 @@ const CurrencyComponent = () => {
           padding: 12px 24px;
           border-radius: 6px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 15px; /* Increased from 14px */
           font-weight: 500;
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Consistent font */
         }
 
         .btn-cancel:hover {

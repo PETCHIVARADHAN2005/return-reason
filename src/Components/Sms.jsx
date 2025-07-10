@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Save} from 'lucide-react';
 const SmsGateway = () => {
   const [activeTab, setActiveTab] = useState('TWILLIO');
   
@@ -190,7 +190,7 @@ const SmsGateway = () => {
 
         <button className="save-button">
           {/* <span className="save-icon">💾</span> */}
-          ✓ Save
+          <Save size={16} /> Save
         </button>
       </div>
 

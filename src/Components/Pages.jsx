@@ -133,70 +133,74 @@ const PagesComponent = () => {
 
       {showAddEdit && (
         <div className="modal-overlay">
-          <div className="modal">
-            <div className="modal-header">
-              <h2>Edit Attribute</h2>
-              <button onClick={handleCancel} className="close-btn">
+          <div className="page-modal" role="dialog" aria-labelledby="page-modal-title">
+            <div className="page-modal-header">
+              <h2 id="page-modal-title">Edit Attribute</h2>
+              <button onClick={handleCancel} className="page-modal-close-btn" aria-label="Close">
                 <X size={20} />
               </button>
             </div>
 
-            <div className="modal-content">
-              <div className="form-group">
-                <label className="form-label">Title</label>
+            <div className="page-modal-content">
+              <div className="page-form-group">
+                <label htmlFor="page-title-input" className="page-form-label">Title</label>
                 <input
+                  id="page-title-input"
                   type="text"
                   value={currentReason.title}
                   onChange={(e) => setCurrentReason({ ...currentReason, title: e.target.value })}
-                  className="form-input"
+                  className="page-form-input"
                   placeholder="Defective Product"
                 />
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Status</label>
-                <div className="radio-group">
-                  <label className="radio-item">
+              <div className="page-form-group">
+                <label className="page-form-label">Status</label>
+                <div className="page-radio-group" role="radiogroup">
+                  <label className="page-radio-item">
                     <input
                       type="radio"
                       name="status"
                       value="Active"
                       checked={currentReason.status === 'Active'}
                       onChange={(e) => setCurrentReason({ ...currentReason, status: e.target.value })}
-                      className="radio-input"
+                      className="page-radio-input"
+                      id="page-status-active"
                     />
                     Active
                   </label>
-                  <label className="radio-item">
+                  <label className="page-radio-item">
                     <input
                       type="radio"
                       name="status"
                       value="Inactive"
                       checked={currentReason.status === 'Inactive'}
                       onChange={(e) => setCurrentReason({ ...currentReason, status: e.target.value })}
-                      className="radio-input"
+                      className="page-radio-input"
+                      id="page-status-inactive"
                     />
                     Inactive
                   </label>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Details</label>
+              <div className="page-form-group">
+                <label htmlFor="page-details-input" className="page-form-label">Details</label>
                 <textarea
+                  id="page-details-input"
                   value={currentReason.details}
                   onChange={(e) => setCurrentReason({ ...currentReason, details: e.target.value })}
-                  className="form-textarea"
+                  className="page-form-textarea"
                   placeholder="Product arrived damaged or not functioning"
                 />
               </div>
             </div>
 
-            <div className="modal-footer">
-              <button onClick={handleSave} className="btn btn-primary">
+            <div className="page-modal-footer">
+              <button onClick={handleSave} className="page-btn page-btn-primary" aria-label="Save changes">
                 ✓ Save
               </button>
-              <button onClick={handleCancel} className="btn btn-secondary">
+              <button onClick={handleCancel} className="page-btn page-btn-secondary" aria-label="Cancel">
                 ⊗ Cancel
               </button>
             </div>
@@ -209,7 +213,7 @@ const PagesComponent = () => {
           <div className="modal">
             <div className="modal-header">
               <h2>View Attribute</h2>
-              <button onClick={handleCancel} className="close-btn">
+              <button onClick={handleCancel} className="close-btn" aria-label="Close">
                 <X size={20} />
               </button>
             </div>
@@ -251,10 +255,10 @@ const PagesComponent = () => {
               </p>
 
               <div className="delete-buttons">
-                <button onClick={handleDelete} className="btn btn-primary">
+                <button onClick={handleDelete} className="btn btn-primary" aria-label="Confirm delete">
                   Yes, Delete it !
                 </button>
-                <button onClick={handleCancel} className="btn btn-secondary">
+                <button onClick={handleCancel} className="btn btn-secondary" aria-label="Cancel delete">
                   No, Cancel !
                 </button>
               </div>
